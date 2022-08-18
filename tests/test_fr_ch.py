@@ -32,13 +32,13 @@ TEST_CASES_CARDINAL = (
     (7232, 'sept mille deux cents trente-deux'),
     (8569, 'huit mille cinq cents soixante-neuf'),
     (9539, 'neuf mille cinq cents trente-neuf'),
-    (1000000, 'un millions'),
-    (1000001, 'un millions un'),
+    (1000000, 'un million'),  # no -s here! (cf. #409)
+    (1000001, 'un million un'),  # no -s here! (cf. #409)
     (4000000, 'quatre millions'),
     (10000000000000, 'dix billions'),
     (100000000000000, 'cent billions'),
-    (1000000000000000000, 'un trillions'),
-    (1000000000000000000000, 'un trilliards'),
+    (1000000000000000000, 'un trillion'),  # no -s here! (cf. #409)
+    (1000000000000000000000, 'un trilliard'),
     (10000000000000000000000000, 'dix quadrillions')
 )
 
@@ -50,9 +50,9 @@ TEST_CASES_ORDINAL = (
     (28, 'vingt-huitième'),
     (100, 'centième'),
     (1000, 'millième'),
-    (1000000, 'un millionsième'),
-    (1000000000000000, 'un billiardsième'),
-    (1000000000000000000, 'un trillionsième')  # over 1e18 is not supported
+    (1000000, 'un millionième'),  # no -s- here! (cf. #409)
+    (1000000000000000, 'un billiardième'),  # no -s here! (cf. #409)
+    (1000000000000000000, 'un trillionième')  # over 1e18 is not supported
 )
 
 TEST_CASES_TO_CURRENCY_EUR = (
